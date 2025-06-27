@@ -15,7 +15,7 @@ estilo_chavoso()
 st.markdown("""
 <div class="custom-header">
     <h1>Palavras mais frequentes nas notícias CNN</h1>
-    <img src="https://github.com/ofeliacarvalhow/playgroundecmi/blob/617b3b921a3076dfab6871029fa68462e6dd0738/iconefofo.png" width="70">
+    <img src="https://github.com/ofeliacarvalhow/playgroundecmi/blob/eca81102464743274ad96a45d45c70080eb4b333/iconefofo.png" width="70">
 </div>
 """, unsafe_allow_html=True)
 
@@ -51,7 +51,7 @@ if pagina_selecionada == "Palavras mais frequentes":
 
         if tipo_grafico != "Nenhum":
             df_filtrado = df_noticias
-            if modo_analise == "Por dia":
+            if modo_de_analise == "Por dia":
                 datas_disponiveis = sorted(df_noticias['Data'].dt.date.unique())
                 data_escolhida = st.selectbox("Escolha uma data disponível:", datas_disponiveis)
                 df_filtrado = df_noticias[df_noticias['Data'].dt.date == data_escolhida]
