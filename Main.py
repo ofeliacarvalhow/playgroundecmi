@@ -29,7 +29,6 @@ if not os.path.exists(CSV):
     st.stop()
 
 # Carregamos o CSV adaptado
-
 df_noticias = pd.read_csv(CSV)
 
 # Renomeamos colunas para o padrão do código
@@ -68,4 +67,29 @@ if pagina_selecionada == "Palavras mais frequentes":
                 palavras_mais_comuns = Counter(todas_as_palavras).most_common(quantidade_palavras)
                 frequennoti(palavras_mais_comuns, tipo_grafico)
             else:
-                st.write("Nenhuma notícia enco
+                st.write("Nenhuma notícia encontrada para análise.")
+
+elif pagina_selecionada == "Pesquisar ou comparar palavras":
+    modo_de_analise = st.radio("Modo de análise:", ["Nenhum", "Geral", "Por fonte"], key="modo2")
+
+    if modo_de_analise in ["Geral", "Por fonte"]:
+        df_filtrado = df_noticias
+        if modo_de_analise == "Por fonte":
+            fontes_disponiveis = sorted(df_noticias['Fonte'].dropna().unique())
+            fonte_escolhida = st.selectbox("Escolha uma fonte:", fontes_disponiveis, key="fonte2")
+            df_filtrado = df_noticias[df_noticias['Fonte'] == fonte_escolhida]
+
+        opcao_busca = st.radio("Tipo de busca:", ["Nenhuma", "Pesquisar uma palavra", "Comparar duas palavras"])
+
+        if opcao_busca == "Pesquisar uma palavra":
+            palavra_pesquisada = st.text_input("Digite a palavra para pesquisar").strip().lower()
+            if palavra_pesquisada:
+                procuranoti(palavra_pesquisada, df_filtrado, IGNORAR)
+
+        elif opcao_busca == "Comparar duas palavras":
+            primeira_palavra = st.text_input("Palavra 1").strip().lower()
+            segunda_palavra = st.text_input("Palavra 2").strip().lower()
+            tipo_grafico_comparacao = st.radio("Tipo de gráfico para ver a comparação:", ["Nenhum", "Colunas", "Pizza"], key="grafico_comparacao")
+
+            if primeira_palavra and segunda_palavra and tipo_grafico_comparacao != "Nenhum":
+                comparanoti(primeira_palavra, segunda_palavra, df_filtrado, IGNORAR, tipo_grafico_comparacao)
