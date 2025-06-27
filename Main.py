@@ -15,7 +15,7 @@ estilo_chavoso()
 # Cabeçalho
 st.markdown("""
 <div class="custom-header">
-    <h1>Palavras mais frequentes nas notícias CNN</h1>
+    <h1>Palavras mais frequentes nas notícias ao redor do mundo</h1>
     <img src="https://raw.githubusercontent.com/ofeliacarvalhow/playgroundecmi/main/iconefofo.png" width="70">
 </div>
 """, unsafe_allow_html=True)
