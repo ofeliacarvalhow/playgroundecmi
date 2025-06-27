@@ -15,7 +15,7 @@ estilo_chavoso()
 st.markdown("""
 <div class="custom-header">
     <h1>Palavras mais frequentes nas notícias CNN</h1>
-    <img src="https://github.com/ofeliacarvalhow/ADOISVERSAOFINALULTRA/blob/2baf622ac142ffbd75586de9fcd2e90f6ff50a72/iconefofo.png" width="70">
+    <img src="https://github.com/ofeliacarvalhow/playgroundecmi/blob/617b3b921a3076dfab6871029fa68462e6dd0738/iconefofo.png" width="70">
 </div>
 """, unsafe_allow_html=True)
 
