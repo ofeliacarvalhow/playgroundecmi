@@ -6,7 +6,7 @@ def estilo_chavoso():
     st.markdown("""
     <style>
         .stApp {
-            background-image: url('https://github.com/ofeliacarvalhow/playgroundecmi/blob/eca81102464743274ad96a45d45c70080eb4b333/fundo.jpg');
+            background-image: url('https://raw.githubusercontent.com/ofeliacarvalhow/playgroundecmi/main/fundo.jpg');
             background-size: cover;
             background-attachment: fixed;
         }
