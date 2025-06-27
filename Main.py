@@ -21,7 +21,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Stopwords
-IGNORAR = {'to', 's', 'the', 'of', 'for', 'in', 'a', 'its', 'what','on', 'u', 'with', 'as', 'at', 't', 'after', 'over', 'is', 'about', 'was','not', 'new', 'he', 'she', 'him', 'his', 'hers', 'her', 'news', 'them', 'they', 'and', 'says', 'just', 'watch', 'from', 'who','will', 'this', 'out', 'by', 'you', 'it', 'be', 'that', 'are', 'how', 'why','de', 'em', 'que','para','sobre','novo','diz','veja','cnn','como','mais','ser','tem','nesta','até','entre','ter','das','quem','r','após','são','pode','à','se','2025','não','sim','por','na','do','no','da','dos','a','o','os','ele','ela','eles','elas','é','com','um','uma','e','ou','quer','ao'}
+IGNORAR = {'to', 's', 'the', 'of', 'for', 'in', 'a', 'its', 'what','now','have','may''on', 'u', 'with', 'as', 'at', 't', 'after', 'over', 'is', 'about', 'was','not', 'new', 'he', 'she', 'him', 'his', 'hers', 'her', 'news', 'them', 'they', 'and', 'says', 'just', 'watch', 'from', 'who','will', 'this', 'out', 'by', 'you', 'it', 'be', 'that', 'are', 'how', 'why','de', 'em', 'que','para','sobre','novo','diz','veja','cnn','como','mais','ser','tem','nesta','até','entre','ter','das','quem','r','após','são','pode','à','se','2025','não','sim','por','na','do','no','da','dos','a','o','os','ele','ela','eles','elas','é','com','um','uma','e','ou','quer','ao'}
 CSV = 'noticias_cnn.csv'
 
 if not os.path.exists(CSV):
